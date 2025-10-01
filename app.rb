@@ -42,7 +42,7 @@ class WordGuesserApp < Sinatra::Base
     le_guess = params[:guess].to_s[0]
     ### YOUR CODE HERE ###
     if not @game.guess(le_guess)
-      flash[:message] = "You have already used that letter"
+      flash[:message] = "You have already used that letter."
     end
 
     case @game.check_win_or_lose()
